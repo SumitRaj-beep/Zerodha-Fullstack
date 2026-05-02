@@ -308,7 +308,9 @@ app.post("/signup",protectedLimiter,async (req,res)=>{
 //authourizatioon is done uisng themiddleware 
 
 //rate limiting is done using this  ra e limitter 
-
+app.get("/", (req, res) => {
+  res.send("Backend is running ✅");
+});
 
 app.listen(3002,()=>{
   console.log("app started");
