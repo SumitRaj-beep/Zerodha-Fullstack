@@ -266,7 +266,7 @@ app.post("/signup",protectedLimiter,async (req,res)=>{
 
   const token = jwt.sign(
     { userId: user._id },
-    "ikolo09ikkikjk",
+     process.env.JWT_SECRET,
     { expiresIn: "48h" }
   );
 
@@ -299,7 +299,7 @@ app.post("/signup",protectedLimiter,async (req,res)=>{
 
   const token = jwt.sign(
     { userId: user._id },
-    "ikolo09ikkikjk",
+    process.env.JWT_SECRET,
     { expiresIn: "48h" }
   );
 
@@ -312,7 +312,7 @@ app.get("/", (req, res) => {
   res.send("Backend is running ✅");
 });
 
-app.listen(3002,()=>{
+app.listen(PORT,()=>{
   console.log("app started");
   mongoose.connect(uri);
   console.log("connected db");
