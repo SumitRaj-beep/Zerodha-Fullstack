@@ -1,0 +1,21 @@
+#buy-window {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  background: rgb(243, 228, 228);
+  z-index: 10;
+    width: 400px;    
+  border: 2px solid rgb(28, 26, 26);
+}
+
+
+.inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+
+  
+}
