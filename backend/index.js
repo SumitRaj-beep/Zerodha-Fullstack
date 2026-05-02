@@ -223,7 +223,7 @@ const globalLimiter = rateLimit({
  const protectedLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 300,
-  keyGenerator: (req) => req.user?.userId || req.ip,
+ 
   message: "Too many requests"
 });
 
@@ -266,7 +266,7 @@ app.post("/signup",protectedLimiter,async (req,res)=>{
 
   const token = jwt.sign(
     { userId: user._id },
-    JWT_SECRET,
+    process.env.JWT_SECRET,
     { expiresIn: "48h" }
   );
 
