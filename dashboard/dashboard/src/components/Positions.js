@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 
-import axios from "Axios";
+import axios from "axios";
 
 // /import  {positions}  from '../data/data';
 
@@ -8,7 +8,7 @@ const Positions= () =>{
      const [allpositions, setallpositions]=useState([]);
          
          useEffect(()=>{
-         axios.get("http://localhost:3002/allpositions",{headers: {
+         axios.get("https://zerodha-backend-yc1r.onrender.com/allpositions",{headers: {
       Authorization: `Bearer ${localStorage.getItem("token")}`
     }}).then((res)=>{
             

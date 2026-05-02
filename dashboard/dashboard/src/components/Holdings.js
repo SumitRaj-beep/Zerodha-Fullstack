@@ -8,7 +8,7 @@ const Holdings=()=>{
      const [allholdings, setallholdings]=useState([]);
       //dtata you will display  , function to update it 
      useEffect(()=>{
-     axios.get("http://localhost:3002/allholdings",  { headers: {
+     axios.get("https://zerodha-backend-yc1r.onrender.com/allholding",  { headers: {
       Authorization: `Bearer ${localStorage.getItem("token")}`
      }
     }).then((res)=>{

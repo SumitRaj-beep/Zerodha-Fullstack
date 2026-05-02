@@ -13,13 +13,13 @@ const [password, setPassword] = useState("");
 const handleSignup = async (e) => {
   e.preventDefault();
  try{
-  const res = await axios.post("http://localhost:3002/signup", {
+  const res = await axios.post("https://zerodha-backend-yc1r.onrender.com/signup", {
     email,
     password,
   });
 
   localStorage.setItem("token", res.data.token);
- window.location.href = `http://localhost:3001?token=${res.data.token}`;
+ window.location.href = `https://dashboard-4lt3.onrender.com?token=${res.data.token}`;
  }
 
 
