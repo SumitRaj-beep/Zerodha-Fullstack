@@ -266,7 +266,7 @@ app.post("/signup",protectedLimiter,async (req,res)=>{
 
   const token = jwt.sign(
     { userId: user._id },
-     process.env.JWT_SECRET,
+    JWT_SECRET,
     { expiresIn: "48h" }
   );
 
